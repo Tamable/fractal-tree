@@ -10,8 +10,8 @@ Create a natural-looking fractal tree by using a L-system (a.k.a. Lindenmayer sy
 
 **Features:**
 
-* Construct strings, based on a set of production rules that expands an initial alphabet ("axiom") into a larger strings of symbols.
-* A tree grows (i.e., drawing a trunk and subsequent branches) with each iteration of the generated strings.
+* Construct strings, based on a set of production rules that expands a single initial alphabet ("axiom") into a larger strings of symbols.
+* With each iteration of the generated strings, a tree grows (i.e., drawing a trunk and subsequent branches).
 * Accept user inputs for customizing the axiom, rules, and branching angle.
 
 ## Technologies
@@ -37,7 +37,7 @@ http://framebox.org/AgbcU
 * Create user input fields for axiom, rules, and angle.
 * Create a modal providing an overview of the L-system.
 
--- bonus --
+-- Future plans --
 * Add color to the tree.
 * Add leaves to the tree.
 * Make the leaves fall.
