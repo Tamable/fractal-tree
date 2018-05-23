@@ -1,0 +1,24 @@
+{
+  "name": "fractal-tree",
+  "version": "1.0.0",
+  "description": "L-system fractal tree",
+  "main": "tree.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tamable/fractal-tree.git"
+  },
+  "keywords": [],
+  "author": "tamaéAvis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tamable/fractal-tree/issues"
+  },
+  "homepage": "https://github.com/Tamable/fractal-tree#readme",
+  "dependencies": {
+    "webpack": "^4.8.3"
+  }
+}
