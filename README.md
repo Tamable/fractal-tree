@@ -21,8 +21,7 @@ Create a natural-looking fractal tree by using a L-system (a.k.a. Lindenmayer sy
 
 ## Wireframes
 
-*
-![wireframes](http://framebox.org/AgbcU)
+http://framebox.org/AgbcU
 
 ## Implementation timeline
 
