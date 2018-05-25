@@ -3,38 +3,57 @@
   <head>
     <link rel="shortcut icon" type="image/jpg" href="./assets/images/tree-icon.png"/>
     <link rel="stylesheet" href="./assets/stylesheets/master.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Raleway:500" rel="stylesheet">
     <script src="./bundle.js"></script>
     <meta charset="utf-8">
     <title>Fractal Tree</title>
   </head>
   <body>
     <div class='container'>
-      <canvas id="canvas" width='600' height='600'></canvas><br>
+      <canvas id="canvas" width='600' height='600'></canvas>
 
-      <p>Customize your tree:</p>
-      Axiom: <input type="text" id="axiom" value="X">
-      Rules 1: <input type="text" id="rule1before" value="X"> &#8594; <input type="text" id="rule1after" value="F+[[X]-X]-F[-FX]+X">
-      Rules 2: <input type="text" id="rule2before" value="F"> &#8594; <input type="text" id="rule2after" value="FF">
-      Angle: <input type="number" id="angle" value="25">
-      <!-- <button id='customize-button' class='customize-button'>Try it!</button> -->
+      <div class='customize-heading'>Customize your tree:</div>
+      <div class='customize-container'>
+        <div class='input-label'>Angle:</div>
+        <div class='input-container'>
+          <input type="number" id="angle" value="25"></div>
+        <div class='input-label'>Axiom:</div>
+        <div class='input-container'>
+          <input type="text" id="axiom" value="X"></div>
 
-      <button id='string-button' class='string-button'>Grow!</button>
-
-      <span class="open-button"><p>What is an L-system?</p></span>
-      <div id='modal' class="modal">
-        <div class="modal-content">
-          <div class="modal-header">
-            <span class='close-button'>&times;</span>
-            <h2>Modal header</h2>
-          </div>
-          <div class="modal-body">
-            <p>modal body</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-          <div class="modal-footer">
-            <h3>modal footer</h3>
-          </div>
+        <div class='input-label'>Rules 1:</div>
+        <div class='input-container'>
+          <input type="text" id="rule1before" value="X"> &#8595;
+          <input type="text" id="rule1after" value="F+[[X]-X]-F[-FX]+X">
         </div>
+        <div class='input-label'>Rules 2:</div>
+        <div class=input-container>
+          <input type="text" id="rule2before" value="F"> &#8595;
+          <input type="text" id="rule2after" value="FF">
+        </div>
+        <!-- <button id='customize-button' class='customize-button'>Try it!</button> -->
+        <span id='grow-button' class='grow-button'><p>Grow your tree!<p></span>
+      </div>
+
+      <span id='clear-button' class='clear-button'>&times; RESTART</span>
+      <div class="modalBtn-container">
+        <span class="open-button"><p>What is an L-system?</p></span>
+      </div>
+
+      <div id='modal' class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class='close-button'>&times;</span>
+              <h2>Modal header</h2>
+            </div>
+            <div class="modal-body">
+              <p>modal body</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="modal-footer">
+              <h3>modal footer</h3>
+            </div>
+          </div>
       </div>
     </div>
 
