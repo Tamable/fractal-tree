@@ -16,6 +16,7 @@ body {
   position: relative;
   height: 100%;
   width: 100%;
+  transition: all 1s;
 }
 
 .fractal-tree {
@@ -47,6 +48,7 @@ canvas {
   left: -130px;
   right: 0;
   background-color: rgba(255, 255, 255, 0.4);
+  transition: 1s;
 }
 
 .customize-container {
@@ -186,8 +188,20 @@ canvas {
 
 .string-list li {
   list-style: none;
-  font-size: 8px;
+  font-size: 10.5px;
   word-wrap: break-word;
+  animation: typing-text 1s steps(85);
+  overflow: hidden;
+  white-space: normal;
+}
+
+@keyframes typing-text {
+  from {
+    width: 0;
+  }
+  to {
+    width: 330px;
+  }
 }
 
 .modalBtn-container {
