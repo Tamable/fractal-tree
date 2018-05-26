@@ -18,17 +18,54 @@ body {
   width: 100%;
 }
 
+.fractal-tree {
+  font-family: 'Poiret One', cursive;
+  font-size: 64px;
+  font-weight: bold;
+  position: absolute;
+  left: 1%;
+  top: 0.5%;
+  text-shadow: 0 0 3px #00487C, -1px -1px #00487C, 1px 1px #00487C;
+}
+
+.l-system {
+  font-family: 'Poiret One', cursive;
+  font-size: 32px;
+  position: absolute;
+  top: 12%;
+  left: 2.5%;
+  text-shadow: 0 0 3px #00487C, -1px -1px #00487C, 1px 1px #00487C;
+}
+
+canvas {
+  border-radius: 50%;
+  box-shadow: 0 0 38px #fff;
+  padding: 0;
+  margin: 0 auto;
+  position: absolute;
+  top: 40px;
+  left: -130px;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
 .customize-container {
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   width: 18%;
-  padding-left: 30px;
+  padding: 0 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 5px solid rgba(0, 166, 251, 0.9);
+  position: absolute;
+  margin: 10px;
+  bottom: 0.5%;
 }
 
 .customize-heading {
   font-family: 'Indie Flower', cursive;
-  font-size: 28px;
-  padding: 25px 20px;
+  font-size: 26px;
+  padding: 10px 0;
   text-shadow: 0 0 3px #00487C, -1px -1px #00487C, 1px 1px #00487C;
 }
 
@@ -55,38 +92,47 @@ body {
   background-color: rgba(0, 166, 251, 0.8);
 }
 
-.grow-button {
-  font-family: 'Indie Flower', cursive;
-  font-size: 24px;
-  margin-top: 20px;
-  border-radius: 10px;
-  border: 2px solid #fff;
-  cursor: pointer;
-  color: #fff;
-  background-color: rgba(0, 166, 251, 0.6);
-  transition: all 0.5s;
-  width: 250px;
-  text-align: center;
+.grow-button-container {
+  position: absolute;
+  left: 26%;
+  bottom: 6%;
+  width: 8%;
 }
 
-.grow-button:hover {
+.grow-button {
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  font-family: 'Indie Flower', cursive;
+  font-size: 24px;
+  border-radius: 10px;
+  border: 5px solid #fff;
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  background-color: rgba(0, 166, 251, 0.8);
+  transition: all 1s;
+}
+
+.grow-button-container:hover .grow-button {
   background: linear-gradient(to bottom right, green, yellow);
   color: #fff;
   text-shadow: 0 0 33px #FFF;
   font-weight: bolder;
-  width: 300px;
-  transition: 0.5s;
+  height: 60px;
+  transition: 1s;
 }
 
 .clear-button {
   font-family: 'Indie Flower', cursive;
   font-size: 24px;
   position: absolute;
-  left: 400px;
-  bottom: 50px;
+  right: 40%;
+  bottom: 8%;
   color: #fff;
   text-shadow: 0 0 3px #00487C;
-  transition: all 0.5s;
+  transition: all 0.5s ease-in-out 0;
 
 }
 
@@ -94,7 +140,54 @@ body {
   cursor: pointer;
   border-bottom: 3px solid blue;
   transition: 0.5s;
+}
 
+.string-window {
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+  right: 16px;
+  bottom: 10px;
+  font-size: 15px;
+  padding: 0 15px;
+  color: #fff;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 5px solid rgba(0, 166, 251, 0.9);
+}
+
+.string-rules {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 10px;
+  -webkit-padding-start: 0;
+  font-size: 14px;
+}
+
+.string-rules li {
+  padding-left: 10px;
+  list-style-position: inside;
+}
+
+.string-rules li:first-child {
+  padding-top: 10px;
+}
+
+.string-heading {
+  font-family: 'Indie Flower', cursive;
+  font-size: 20px;
+}
+
+.string-list {
+  -webkit-margin-before: 0;
+  -webkit-padding-start: 0;
+  width: 400px;
+  height: 330px;
+}
+
+.string-list li {
+  list-style: none;
+  font-size: 8px;
+  word-wrap: break-word;
 }
 
 .modalBtn-container {
@@ -103,24 +196,11 @@ body {
   right: 16px;
 }
 
-canvas {
-  border-radius: 50%;
-  box-shadow: 0 0 38px #fff;
-  padding: 0;
-  margin: auto;
-  position: absolute;
-  top: 100px;
-  bottom: 100px;
-  left: 0;
-  right: 0;
-  background-color: rgba(255, 255, 255, 0.4);
-}
-
 .open-button {
   font-family: 'Indie Flower', cursive;
   display: inline-block;
   text-align: center;
-  font-size: 26px;
+  font-size: 28px;
   font-weight: bolder;
   padding: 0 15px;
   color: #fff;
@@ -128,7 +208,7 @@ canvas {
   box-sizing: border-box;
   border-radius: 10px;
   border: 5px solid #fff;
-  transition: all 0.5s;
+  transition: all 1s;
   cursor: pointer;
 }
 
@@ -143,7 +223,7 @@ canvas {
   cursor: pointer;
   display: inline-block;
   position: relative;
-  transition: 0.5s;
+  transition: 1s;
 }
 
 .open-button p:after {
@@ -155,7 +235,7 @@ canvas {
 }
 
 .open-button:hover p {
-  padding-right: 25px;
+  padding-right: 35px;
 }
 
 .open-button:hover p:after {

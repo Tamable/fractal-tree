@@ -4,16 +4,19 @@
     <link rel="shortcut icon" type="image/jpg" href="./assets/images/tree-icon.png"/>
     <link rel="stylesheet" href="./assets/stylesheets/master.css">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Raleway:500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
     <script src="./bundle.js"></script>
     <meta charset="utf-8">
     <title>Fractal Tree</title>
   </head>
   <body>
     <div class='container'>
+      <div class="fractal-tree">Fractal Tree</div>
+      <div class="l-system">L-system Algorithm</div>
       <canvas id="canvas" width='600' height='600'></canvas>
 
-      <div class='customize-heading'>Customize your tree:</div>
       <div class='customize-container'>
+        <div class='customize-heading'>Customize your tree:</div>
         <div class='input-label'>Angle:</div>
         <div class='input-container'>
           <input type="number" id="angle" value="25"></div>
@@ -32,12 +35,13 @@
           <input type="text" id="rule2after" value="FF">
         </div>
         <!-- <button id='customize-button' class='customize-button'>Try it!</button> -->
-        <span id='grow-button' class='grow-button'><p>Grow your tree!<p></span>
       </div>
-
+      <div class="grow-button-container">
+        <span id='grow-button' class='grow-button'><span>GROW!</span></span>
+      </div>
       <span id='clear-button' class='clear-button'>&times; RESTART</span>
       <div class="modalBtn-container">
-        <span class="open-button"><p>What is an L-system?</p></span>
+        <span class="open-button"><p>How does this work?</p></span>
       </div>
     </div>
 
@@ -52,13 +56,24 @@
         </div>
         <div class="modal-footer">
           <div id='bubbles' class="bubbles">
-            <div></div>
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
           </div>
         </div>
       </div>
     </div>
 
-    <p id='strings'></p>
+    <div class="string-window">
+      <ul class='string-rules'>
+        <div class="string-heading">Default rules:</div>
+        <li>' F ' → Draw straight forward.</li>
+        <li>' + ' → Turn right 25 degrees.</li>
+        <li>' - ' → Turn left 25 degrees.</li>
+        <li>' X ' → No action.</li>
+        <li>' [ ' → Save the current position & angle.</li>
+        <li>' ] ' → Restore the previous position & angle.</li>
+      </ul>
+      <div class="string-heading">Watch how the axiom evolves:</div>
+      <ul id='string-list' class='string-list'></ul>
+    </div>
   </body>
 </html>
