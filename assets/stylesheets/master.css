@@ -80,9 +80,9 @@ body {
 
 .clear-button {
   font-family: 'Indie Flower', cursive;
-  font-size: 20px;
+  font-size: 24px;
   position: absolute;
-  left: 350px;
+  left: 400px;
   bottom: 50px;
   color: #fff;
   text-shadow: 0 0 3px #00487C;
@@ -177,9 +177,10 @@ canvas {
 }
 
 .modal-content {
+  font-family: 'Raleway', sans-serif;
   background-color: #f4f4f4;
   margin: 10% auto;
-  width: 70%;
+  width: 50%;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   animation-name: modalOpen;
   animation-duration: 2s;
@@ -196,7 +197,8 @@ canvas {
 }
 
 .modal-body {
-  padding: 10px 20px;
+  padding: 20px 30px;
+  height: 300px;
 }
 
 .modal-footer {
@@ -226,6 +228,7 @@ canvas {
 .bubbles {
   width: auto;
   margin: auto;
+  transition: all 0.3s;
   text-align: center;
 }
 
@@ -240,13 +243,13 @@ canvas {
   border-radius: 50%;
   font-size: 17px;
   text-decoration: none;
-  transition: all 0.3s;
+  transition: 0.3s;
   cursor: pointer;
 }
 
 .bubble-content {
   margin: auto;
-  transition: 0.3s;
+  transition: all 0.5s;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -254,4 +257,5 @@ canvas {
   font-size: 17px;
   line-height: 1.6;
   color: #777;
+  transition: 0.5s;
 }

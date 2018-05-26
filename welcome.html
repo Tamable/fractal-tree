@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome</title>
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+    <style media="screen">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #157F1F;
+    }
+
+    .fly-in-text {
+      list-style: none;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    .fly-in-text li {
+      font-family: 'Poiret One', cursive;
+      display: inline-block;
+      color: #fff;
+      margin-right: 50px;
+      font-weight: 300;
+      font-size: 64px;
+      opacity: 1;
+      transition: all 2.5s ease;
+    }
+
+    .fly-in-text li:last-child {
+      margin-right: 0;
+    }
+
+    .fly-in-text.hidden li {
+      opacity: 0;
+    }
+
+    .fly-in-text.hidden li:nth-child(1) {
+      transform: translateX(-200px) translateY(-200px);
+    }
+    .fly-in-text.hidden li:nth-child(2) {
+      transform: translateX(20px) translateY(100px);
+    }
+    .fly-in-text.hidden li:nth-child(3) {
+      transform: translateX(-150px) translateY(-80px);
+    }
+    .fly-in-text.hidden li:nth-child(4) {
+      transform: translateX(10px) translateY(-200px);
+    }
+    .fly-in-text.hidden li:nth-child(5) {
+      transform: translateX(-300px) translateY(-100px);
+    }
+    .fly-in-text.hidden li:nth-child(6) {
+      transform: translateX(30px) translateY(210px);
+    }
+    .fly-in-text.hidden li:nth-child(7) {
+      transform: translateX(-120px) translateY(80px);
+    }
+    .fly-in-text.hidden li:nth-child(9) {
+      transform: translateX(80px) translateY(-150px);
+    }
+    .fly-in-text.hidden li:nth-child(10) {
+      transform: translateX(30px) translateY(210px);
+    }
+    .fly-in-text.hidden li:nth-child(11) {
+      transform: translateX(210px) translateY(-110px);
+    }
+    .fly-in-text.hidden li:nth-child(12) {
+      transform: translateX(130px) translateY(150px);
+    }
+    .fly-in-text.hidden li:nth-child(13) {
+      transform: translateX(60px) translateY(-160px);
+    }
+
+    .enter.hidden {
+      opacity: 0;
+    }
+
+    .enter {
+      position: absolute;
+      opacity: 1;
+      transition: all 1s;
+      bottom: 40%;
+      left: 50%;
+    }
+
+    .enter p {
+      font-size: 32px;
+      color: #fff;
+      transition: 1s;
+      font-family: 'Sacramento', cursive;
+    }
+
+    .enter:hover {
+      text-shadow: 0 0 33px #FFF;
+      cursor: pointer;
+    }
+
+    </style>
+  </head>
+  <body>
+
+    <ul id='fly-in-text' class='fly-in-text hidden'>
+      <li>F</li>
+      <li>R</li>
+      <li>A</li>
+      <li>C</li>
+      <li>T</li>
+      <li>A</li>
+      <li>L</li>
+      <li>&nbsp;</li>
+      <li>T</li>
+      <li>R</li>
+      <li>E</li>
+      <li>E</li>
+    </ul>
+
+    <a href='./index.html'>
+    <div id='enter' class="enter hidden">
+      <p>Welcome</p>
+    </div>
+    </a>
+
+    <script type="text/javascript">
+
+    const welcomeMessage = () => {
+      setTimeout(() => {
+        document.getElementById('fly-in-text').classList.remove('hidden');
+      }, 500);
+      setTimeout(() => {
+        document.getElementById('enter').classList.remove('hidden');
+      }, 3000);
+    }
+    welcomeMessage();
+
+    </script>
+  </body>
+</html>
