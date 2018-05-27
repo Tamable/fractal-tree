@@ -332,7 +332,7 @@ canvas {
 
 .modal-footer {
   background-color: #00A6FB;
-  padding: 5px;
+  padding: 0 10px 15px 10px;
   color: #fff;
   text-align: center;
 }
