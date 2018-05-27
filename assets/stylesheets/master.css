@@ -21,7 +21,7 @@ body {
 
 .fractal-tree {
   color: #fff;
-  font-family: 'Poiret One', cursive;
+  font-family: 'Amatic SC', cursive;
   font-size: 64px;
   font-weight: bold;
   position: absolute;
@@ -32,7 +32,7 @@ body {
 
 .l-system {
   color: #fff;
-  font-family: 'Poiret One', cursive;
+  font-family: 'Amatic SC', cursive;
   font-size: 32px;
   position: absolute;
   top: 12%;
@@ -43,15 +43,15 @@ body {
 .contact-info {
   position: absolute;
   right: 22%;
-  top: 5%;
+  top: 6%;
   transition: all 5s;
 }
 
 .contact-info > a > i {
   /* color: rgba(0, 166, 251, 0.8); */
   color: rgba(0, 0, 0, 0.7);
-  font-size: 53px;
-  margin-right: 20px;
+  font-size: 40px;
+  margin-right: 25px;
   animation: roll 5s infinite;
   transform:rotateY(0deg);
 }
@@ -208,7 +208,7 @@ canvas {
 
 .string-heading {
   font-family: 'Indie Flower', cursive;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .string-list {
@@ -306,6 +306,7 @@ canvas {
   font-family: 'Raleway', sans-serif;
   background-color: #f4f4f4;
   margin: 10% auto;
+  border-radius: 10px;
   width: 50%;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   animation-name: modalOpen;
@@ -319,7 +320,7 @@ canvas {
 .modal-header {
   background-color: #00A6FB;
   padding: 15px;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Amatic SC', cursive;
   font-size: 20px;
   color: #fff;
 }
@@ -331,7 +332,7 @@ canvas {
 
 .modal-footer {
   background-color: #00A6FB;
-  padding: 10px;
+  padding: 5px;
   color: #fff;
   text-align: center;
 }
