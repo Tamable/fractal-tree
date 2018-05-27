@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="shortcut icon" type="image/jpg" href="./assets/images/tree-icon.png"/>
+    <link rel="stylesheet" href="./assets/stylesheets/master.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Raleway:500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <script src="./bundle.js"></script>
+    <meta charset="utf-8">
+    <title>Fractal Tree</title>
+  </head>
+  <body>
+    <div class='container'>
+      <div class="fractal-tree">Fractal Tree</div>
+      <div class="l-system">L-system Algorithm</div>
+      <div class="contact-info">
+        <a href='https://github.com/Tamable'><i class="fab fa-github fa-3x mb-3 sr-contact"></i></a>
+        <a href='https://www.linkedin.com/in/tamae'><i class="fab fa-linkedin fa-3x mb-3 sr-contact"></i></a>
+        <a href="mailto:tamae@outlook.com"><i class="fas fa-envelope-open fa-3x mb-3 sr-contact"></i></a>
+      </div>
+      <canvas id="canvas" width='600' height='600'></canvas>
+
+      <div class='customize-container'>
+        <div class='customize-heading'>Customize your tree:</div>
+        <div class='input-label'>Angle:</div>
+        <div class='input-container'>
+          <input type="number" id="angle" value="25"></div>
+        <div class='input-label'>Axiom:</div>
+        <div class='input-container'>
+          <input type="text" id="axiom" value="X"></div>
+
+        <div class='input-label'>Rules 1:</div>
+        <div class='input-container'>
+          <input type="text" id="rule1before" value="X"> &#8595;
+          <input type="text" id="rule1after" value="F+[[X]-X]-F[-FX]+X">
+        </div>
+        <div class='input-label'>Rules 2:</div>
+        <div class=input-container>
+          <input type="text" id="rule2before" value="F"> &#8595;
+          <input type="text" id="rule2after" value="FF">
+        </div>
+        <!-- <button id='customize-button' class='customize-button'>Try it!</button> -->
+      </div>
+      <div class="grow-button-container">
+        <span id='grow-button' class='grow-button'><span>GROW!</span></span>
+      </div>
+      <span id='clear-button' class='clear-button'>&times; RESTART</span>
+      <div class="modalBtn-container">
+        <span class="open-button"><p>How does this work?</p></span>
+      </div>
+    </div>
+
+    <div id='modal' class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class='close-button'>&times;</span>
+          <h2>Welcome to the Beautiful World of Algorithmic Botany</h2>
+        </div>
+        <div class="modal-body">
+          <div id='bubble-content' class="bubble-content"></div>
+        </div>
+        <div class="modal-footer">
+          <div id='bubbles' class="bubbles">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="string-window">
+      <ul class='string-rules'>
+        <div class="string-heading">Default rules:</div>
+        <li>' F ' → Draw straight forward.</li>
+        <li>' + ' → Turn right 25 degrees.</li>
+        <li>' - ' → Turn left 25 degrees.</li>
+        <li>' X ' → No action.</li>
+        <li>' [ ' → Save the current position & angle.</li>
+        <li>' ] ' → Restore the previous position & angle.</li>
+      </ul>
+      <div class="string-heading">Watch how the axiom evolves:</div>
+      <ul id='string-list' class='string-list'></ul>
+    </div>
+  </body>
+</html>

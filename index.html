@@ -1,79 +1,144 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <link rel="shortcut icon" type="image/jpg" href="./assets/images/tree-icon.png"/>
-    <link rel="stylesheet" href="./assets/stylesheets/master.css">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Raleway:500" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-    <script src="./bundle.js"></script>
     <meta charset="utf-8">
-    <title>Fractal Tree</title>
+    <title>Welcome</title>
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+    <style media="screen">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #157F1F;
+    }
+
+    .fly-in-text {
+      list-style: none;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    .fly-in-text li {
+      font-family: 'Poiret One', cursive;
+      display: inline-block;
+      color: #fff;
+      margin-right: 50px;
+      font-size: 64px;
+      opacity: 1;
+      transition: all 2.5s ease;
+    }
+
+    .fly-in-text li:last-child {
+      margin-right: 0;
+    }
+
+    .fly-in-text.hidden li {
+      opacity: 0;
+    }
+
+    .fly-in-text.hidden li:nth-child(1) {
+      transform: translateX(-200px) translateY(-200px);
+    }
+    .fly-in-text.hidden li:nth-child(2) {
+      transform: translateX(20px) translateY(100px);
+    }
+    .fly-in-text.hidden li:nth-child(3) {
+      transform: translateX(-150px) translateY(-80px);
+    }
+    .fly-in-text.hidden li:nth-child(4) {
+      transform: translateX(10px) translateY(-200px);
+    }
+    .fly-in-text.hidden li:nth-child(5) {
+      transform: translateX(-300px) translateY(-100px);
+    }
+    .fly-in-text.hidden li:nth-child(6) {
+      transform: translateX(30px) translateY(210px);
+    }
+    .fly-in-text.hidden li:nth-child(7) {
+      transform: translateX(-120px) translateY(80px);
+    }
+    .fly-in-text.hidden li:nth-child(9) {
+      transform: translateX(80px) translateY(-150px);
+    }
+    .fly-in-text.hidden li:nth-child(10) {
+      transform: translateX(30px) translateY(210px);
+    }
+    .fly-in-text.hidden li:nth-child(11) {
+      transform: translateX(210px) translateY(-110px);
+    }
+    .fly-in-text.hidden li:nth-child(12) {
+      transform: translateX(130px) translateY(150px);
+    }
+    .fly-in-text.hidden li:nth-child(13) {
+      transform: translateX(60px) translateY(-160px);
+    }
+
+    .enter.hidden {
+      opacity: 0;
+    }
+
+    .enter {
+      position: absolute;
+      opacity: 1;
+      transition: all 1s;
+      bottom: 40%;
+      left: 50%;
+    }
+
+    .enter p {
+      font-size: 32px;
+      color: #fff;
+      transition: 1s;
+      font-family: 'Sacramento', cursive;
+    }
+
+    .enter:hover {
+      text-shadow: 0 0 33px #FFF;
+      cursor: pointer;
+    }
+
+    </style>
   </head>
   <body>
-    <div class='container'>
-      <div class="fractal-tree">Fractal Tree</div>
-      <div class="l-system">L-system Algorithm</div>
-      <canvas id="canvas" width='600' height='600'></canvas>
 
-      <div class='customize-container'>
-        <div class='customize-heading'>Customize your tree:</div>
-        <div class='input-label'>Angle:</div>
-        <div class='input-container'>
-          <input type="number" id="angle" value="25"></div>
-        <div class='input-label'>Axiom:</div>
-        <div class='input-container'>
-          <input type="text" id="axiom" value="X"></div>
+    <ul id='fly-in-text' class='fly-in-text hidden'>
+      <li>F</li>
+      <li>R</li>
+      <li>A</li>
+      <li>C</li>
+      <li>T</li>
+      <li>A</li>
+      <li>L</li>
+      <li>&nbsp;</li>
+      <li>T</li>
+      <li>R</li>
+      <li>E</li>
+      <li>E</li>
+    </ul>
 
-        <div class='input-label'>Rules 1:</div>
-        <div class='input-container'>
-          <input type="text" id="rule1before" value="X"> &#8595;
-          <input type="text" id="rule1after" value="F+[[X]-X]-F[-FX]+X">
-        </div>
-        <div class='input-label'>Rules 2:</div>
-        <div class=input-container>
-          <input type="text" id="rule2before" value="F"> &#8595;
-          <input type="text" id="rule2after" value="FF">
-        </div>
-        <!-- <button id='customize-button' class='customize-button'>Try it!</button> -->
-      </div>
-      <div class="grow-button-container">
-        <span id='grow-button' class='grow-button'><span>GROW!</span></span>
-      </div>
-      <span id='clear-button' class='clear-button'>&times; RESTART</span>
-      <div class="modalBtn-container">
-        <span class="open-button"><p>How does this work?</p></span>
-      </div>
+    <a href='./index2.html'>
+    <div id='enter' class="enter hidden">
+      <p>Welcome</p>
     </div>
+    </a>
 
-    <div id='modal' class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <span class='close-button'>&times;</span>
-          <h2>Welcome to the Beautiful World of Algorithmic Botany</h2>
-        </div>
-        <div class="modal-body">
-          <div id='bubble-content' class="bubble-content"></div>
-        </div>
-        <div class="modal-footer">
-          <div id='bubbles' class="bubbles">
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <script type="text/javascript">
 
-    <div class="string-window">
-      <ul class='string-rules'>
-        <div class="string-heading">Default rules:</div>
-        <li>' F ' → Draw straight forward.</li>
-        <li>' + ' → Turn right 25 degrees.</li>
-        <li>' - ' → Turn left 25 degrees.</li>
-        <li>' X ' → No action.</li>
-        <li>' [ ' → Save the current position & angle.</li>
-        <li>' ] ' → Restore the previous position & angle.</li>
-      </ul>
-      <div class="string-heading">Watch how the axiom evolves:</div>
-      <ul id='string-list' class='string-list'></ul>
-    </div>
+    const welcomeMessage = () => {
+      setTimeout(() => {
+        document.getElementById('fly-in-text').classList.remove('hidden');
+      }, 500);
+      setTimeout(() => {
+        document.getElementById('enter').classList.remove('hidden');
+      }, 3000);
+    }
+    welcomeMessage();
+
+    </script>
   </body>
 </html>
