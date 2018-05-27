@@ -319,6 +319,8 @@ canvas {
 .modal-header {
   background-color: #00A6FB;
   padding: 15px;
+  font-family: 'Indie Flower', cursive;
+  font-size: 20px;
   color: #fff;
 }
 
@@ -362,7 +364,7 @@ canvas {
   display: inline-block;
   width: 10px;
   height: 10px;
-  margin: 24px 10px 0 10px;
+  margin: 24px 5px 0 10px;
   background: rgba(0, 0 0, 0.1);
   text-align: center;
   border: 2px solid #999;
@@ -370,7 +372,6 @@ canvas {
   font-size: 17px;
   text-decoration: none;
   transition: 0.3s;
-  cursor: pointer;
 }
 
 .bubble-content {
