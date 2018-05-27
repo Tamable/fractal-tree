@@ -40,10 +40,8 @@ body {
 
 .contact-info {
   position: absolute;
-  right: 30px;
-  top: 10px;
-  width: 200px;
-  height: 200px;
+  right: 23%;
+  top: 4%;
 }
 
 canvas {
