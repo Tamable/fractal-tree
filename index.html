@@ -106,7 +106,6 @@
     </style>
   </head>
   <body>
-
     <ul id='fly-in-text' class='fly-in-text hidden'>
       <li>F</li>
       <li>R</li>
@@ -122,12 +121,9 @@
       <li>E</li>
       <li>E</li>
     </ul>
-
-    <a href='./tree.html'>
     <div id='enter' class="enter hidden">
       <p>Welcome</p>
     </div>
-    </a>
 
     <script type="text/javascript">
 
@@ -137,7 +133,10 @@
       }, 500);
       setTimeout(() => {
         document.getElementById('enter').classList.remove('hidden');
-      }, 3000);
+      }, 2000);
+      setTimeout(() => {
+        window.location.href='./tree.html'
+      }, 3500);
     }
     welcomeMessage();
 
