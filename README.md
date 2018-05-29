@@ -8,10 +8,25 @@
 
 Create a natural-looking fractal tree by using a L-system (a.k.a. Lindenmayer system) and turtle graphics.
 
+**Underlying Logic:**
+
+An L-system (a.k.a. Lindenmayer system) is a string rewriting system. It is a popular tool for simulating complex organic structures, such as plants.
+
+The basic idea is to define complex objects by successively replacing parts of a simple object, using a set of rewriting rules.
+
+Each character of the string serves as a graphical instruction that translates the string into drawing. For example:
+ * 'F' for drawing a line segment,
+ * '+' for turning right 25 degrees,
+ * '-' for turning left 25 degrees,  
+ * '[' for pushing (= saving current) position and angle,
+ * ']' for popping (= restoring previous) position and angle
+
 **Features:**
 
-* Construct strings, based on a set of production rules that expands a single initial alphabet ("axiom") into a larger strings of symbols.
-* With each iteration of the generated strings, a tree grows (i.e., drawing a trunk and subsequent branches).
+* Generate strings, based on a set of production rules that expands a single initial alphabet ("axiom") into a larger strings of symbols.
+* Iterate over each character of the generated string and execute the graphical rule, drawing branches accordingly.
+* For each generation of the string, shorten the length of the line segments by 60%.
+* Reset the strings and graphics after 6 iterations.
 * Accept user inputs for customizing the axiom, rules, and branching angle.
 
 ## Technologies
@@ -22,20 +37,6 @@ Create a natural-looking fractal tree by using a L-system (a.k.a. Lindenmayer sy
 ## Wireframes
 
 http://framebox.org/AgbcU
-
-## Implementation timeline
-
-#### phase 1 ####
-* Create a function to recursively build up a string, based on the starting axiom and a set of defined rules.
-* Create a button that triggers the string-generating function 'onClick'. The button is disabled after 6 clicks, and it switches to a reset button to clear the strings and graphics. After reset, the button switches back to a 'grow' button.
-
-#### phase 2 ####
-* Create a function to iterate over each character of the sentence and assign a graphical rule to each character.
-* Create a function to execute the graphical rules - draw a line segment or push/pop position and angle rotation.
-
-#### phase 3 ####
-* Create user input fields for axiom, rules, and angle.
-* Create a modal providing an overview of the underlying L-system.
 
 -- Future plans --
 * Add color to the tree.
