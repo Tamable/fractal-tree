@@ -24,6 +24,9 @@
           <i class="fab fa-linkedin"></i>
           <!-- <img src="./assets/images/In-Black-59px-TM.png" /> -->
         </a>
+        <a href="http://www.tamae-m.com/">
+          <i class="fas fa-folder-open"></i>
+        </a>
         <a href="mailto:tamae@outlook.com">
           <i class="fas fa-envelope-open"></i>
         </a>
@@ -67,12 +70,34 @@
           <h2>Welcome to the Beautiful World of Algorithmic Botany</h2>
         </div>
         <div class="modal-body">
-          <div id='bubble-content' class="bubble-content"></div>
+          <div class="bubble-content fade">
+            <div class="text">
+              An L-system (a.k.a. Lindenmayer system) is a string rewriting system.&nbsp;It is a popular tool for simulating complex organic structures, such as plants.<br><br>The basic idea is to define complex objects by successively replacing parts of a simple object, using a set of rewriting rules.
+            </div>
+          </div>
+          <div class="bubble-content fade">
+            <div class="text">
+              The rewriting process starts with a simple string called 'axiom.'<br><br>Let's say, we want to use the letter 'A' as the axiom, and set a rewriting rule that replaces 'A' with 'AB' each iteration.
+            </div>
+          </div>
+          <div class="bubble-content fade">
+            <div class="text">
+              1st iteration: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A<br>2nd iteration: &nbsp;&nbsp;&nbsp;AB<br>3rd iteration: &nbsp;&nbsp;&nbsp;AB&nbsp;B<br>4th iteration: &nbsp;&nbsp;&nbsp;AB&nbsp;B&nbsp;B<br>5th iteration: &nbsp;&nbsp;&nbsp;AB&nbsp;B&nbsp;B&nbsp;B<br><br>so on and so forth... You get the idea.
+            </div>
+          </div>
+          <div class="bubble-content fade">
+            <div class="text">
+              Let's apply this string-manipulation system to a graphics routine, in which each character in the string represents a position/angle instruction for drawing intricate branches.<br><br>Click the Grow! button, and your tree will start growing inside the magic window. <br>Thank you, and enjoy!
+            </div>
+          </div>
+          <a class='prev'>&#10094;</a>
+          <a class='next'>&#10095;</a>
         </div>
         <div class="modal-footer">
-          <div id='bubbles' class="bubbles">
-            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-          </div>
+          <div class="bubbles"></div>
+          <div class="bubbles"></div>
+          <div class="bubbles"></div>
+          <div class="bubbles"></div>
         </div>
       </div>
     </div>

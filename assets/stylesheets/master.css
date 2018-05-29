@@ -328,11 +328,13 @@ canvas {
 .modal-body {
   padding: 20px 30px;
   height: 300px;
+  margin: auto;
+  position: relative;
 }
 
 .modal-footer {
   background-color: #00A6FB;
-  padding: 0 10px 15px 10px;
+  padding: 10px;
   color: #fff;
   text-align: center;
 }
@@ -355,35 +357,69 @@ canvas {
 }
 
 .bubbles {
-  width: auto;
-  margin: auto;
-  transition: all 0.3s;
-  text-align: center;
-}
-
-.bubbles > div {
+  cursor: pointer;
   display: inline-block;
   width: 10px;
   height: 10px;
-  margin: 24px 5px 0 10px;
-  background: rgba(0, 0 0, 0.1);
-  text-align: center;
+  margin: 0 10px;
+  background-color: #bbb;
   border: 2px solid #999;
   border-radius: 50%;
-  font-size: 17px;
-  text-decoration: none;
-  transition: 0.3s;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
 }
 
 .bubble-content {
-  margin: auto;
-  transition: all 0.5s;
-  font-family: 'Raleway', sans-serif;
+  display: none;
 }
 
-.bubble-content > p {
+.prev {
+  left: 0;
+  border-radius: 0 3px 3px 0;
+  position: absolute;
+  top: 50%;
+  margin-top: -22px;
+  padding: 16px;
+  color: #fff;
+  font-size: 18px;
+  transition: 0.6s ease;
+  cursor: pointer;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  position: absolute;
+  top: 50%;
+  margin-top: -22px;
+  padding: 16px;
+  color: #fff;
+  font-size: 18px;
+  transition: 0.6s ease;
+  cursor: pointer;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+  position: absolute;
+  padding: 8px 12px;
   font-size: 17px;
   line-height: 1.6;
   color: #777;
-  transition: 0.5s;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from { opacity: 0.4 }
+  to { opacity: 1 }
 }
