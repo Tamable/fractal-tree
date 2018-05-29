@@ -52,14 +52,14 @@ body {
   color: rgba(0, 0, 0, 0.7);
   font-size: 40px;
   margin-right: 25px;
-  animation: roll 5s infinite;
+  /* animation: roll 5s infinite; */
   transform:rotateY(0deg);
 }
 
-/* .contact-info > a > i:hover {
+.contact-info > a > i:hover {
   animation: roll 3s;
   transform:rotateY(0);
-} */
+}
 
 @keyframes roll {
   0% {
@@ -201,7 +201,8 @@ canvas {
 }
 
 .string-list li {
-  list-style: none;
+  list-style: decimal;
+  list-style-position: inside;
   font-size: 10.5px;
   word-wrap: break-word;
   animation: typing-text 1s steps(85);
