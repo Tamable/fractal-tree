@@ -1,6 +1,6 @@
 # L-system Fractal Tree
 
-[Live demo] (http://www.tamae-m.com/fractal-tree/)
+[Live demo](http://www.tamae-m.com/fractal-tree/)
 
 ## MVP
 
