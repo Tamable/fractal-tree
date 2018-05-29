@@ -145,18 +145,18 @@ canvas {
   color: #fff;
   text-align: center;
   padding: 10px 0;
-  background-color: rgba(0, 166, 251, 0.8);
+  background: linear-gradient(to bottom right, green, yellow);
+  /* background-color: rgba(0, 166, 251, 0.8); */
   transition: all 1s;
 }
 
-.grow-button-container:hover .grow-button {
-  background: linear-gradient(to bottom right, green, yellow);
+/* .grow-button-container:hover .grow-button {
   color: #fff;
   text-shadow: 0 0 33px #FFF;
   font-weight: bolder;
   height: 100px;
   transition: 1s;
-}
+} */
 
 .string-window {
   font-family: 'Raleway', sans-serif;
