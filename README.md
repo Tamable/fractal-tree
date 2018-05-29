@@ -26,8 +26,8 @@ http://framebox.org/AgbcU
 ## Implementation timeline
 
 #### phase 1 ####
-* Create a function to recursively build up a sentence, based on the starting axiom and a set of defined rules.
-* Create a button that triggers the sentence-generating function 'onClick'.
+* Create a function to recursively build up a string, based on the starting axiom and a set of defined rules.
+* Create a button that triggers the string-generating function 'onClick'. The button is disabled after 6 clicks, and it switches to a reset button to clear the strings and graphics. After reset, the button switches back to a 'grow' button.
 
 #### phase 2 ####
 * Create a function to iterate over each character of the sentence and assign a graphical rule to each character.
@@ -35,7 +35,7 @@ http://framebox.org/AgbcU
 
 #### phase 3 ####
 * Create user input fields for axiom, rules, and angle.
-* Create a modal providing an overview of the L-system.
+* Create a modal providing an overview of the underlying L-system.
 
 -- Future plans --
 * Add color to the tree.
